@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom';
 
 import CategoryTypes from '../../component/category-data/category-types.component';
 
@@ -31,7 +32,11 @@ const Home = () => {
   ];
   
   return (
-    <CategoryTypes categories={categories}/>      
+    <div>
+      <Outlet />
+      <CategoryTypes categories={categories}/> 
+    </div>
+         
   );
 };
 
